@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>reStructedText Grammar &mdash; Notes 1.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Notes 1.0 documentation" href="../index.html"/>
+        <link rel="next" title="Intellij idea" href="intellij_idea.html"/>
+        <link rel="prev" title="Swift" href="../languages/swift.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> Notes</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/sphinx.html">Sphinx Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/j2ee.html">J2EE configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/j2ee.html#mactomcat">Mac下安装Tomcat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/j2ee.html#intellij-ideatomcat8">Intellij idea配置Tomcat8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/j2ee.html#intellij-ideamaven-struts">Intellij idea配置Maven + struts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/j2ee.html#macmysql">Mac下安装Mysql</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../linux/awk.html">awk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../linux/awk.html#id1">1. 基本结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux/awk.html#id2">2. 内建变量</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../languages/haskell.html">Haskell</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../languages/haskell.html#id1">基本语法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../languages/haskell.html#list">List</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../languages/swift.html">Swift</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../languages/swift.html#source">1. source</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">reStructedText Grammar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">空行分段</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">自动换行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">不留白续行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">插入换行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">段落缩进</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">代码块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">无序列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">有序列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">列表综合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">定义</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">分隔线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">粗体和斜体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">删除线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">下划线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">上标和下标</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id16">等宽字体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id17">引言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id18">清除标记空白</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id19">一般方式表示表格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id20">简单方式表示的表格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#url">URL自动链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id21">文字链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id22">插入图片</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id23">引用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id24">参考</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="intellij_idea.html">Intellij idea</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intellij_idea.html#source">1. source</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Notes</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>reStructedText Grammar</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/tools/reStructedText.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="restructedtext-grammar">
+<span id="label-1"></span><h1>reStructedText Grammar<a class="headerlink" href="#restructedtext-grammar" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>空行分段<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>第一段内容</p>
+<p>第二段和第一段间有空行</p>
+</div>
+<div class="section" id="id2">
+<h2>自动换行<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>一个回车不分段，
+本行续上行。</p>
+</div>
+<div class="section" id="id3">
+<h2>不留白续行<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>行尾转义字符让续行之间不留白。</p>
+</div>
+<div class="section" id="id4">
+<h2>插入换行<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">保持换行符，</div>
+<div class="line">本行不续行。</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>段落缩进<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>第一段段落缩进。</p>
+<blockquote>
+<div>第二段段落缩进。</div></blockquote>
+<p>返回上一段段落缩进。</p>
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h2>代码块<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>大段代码需要指明语言类型:</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="cp">#include&lt;iostream&gt;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;test!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>无序列表<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>星号、减号、加号开始列表。<ul>
+<li>列表层次和缩进有关。<ul>
+<li>和具体符号无关</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>返回一级列表。</li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h2>有序列表<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">数字和点是一种编写方式。</p>
+<ol class="upperalpha">
+<li><p class="first">大写字母编号。</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>小写字母编号。</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</li>
+<li><p class="first">继续一级列表。</p>
+<p>（I）大写罗马编号。</p>
+<blockquote>
+<div><p>i）小写罗编号。</p>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="id9">
+<h2>列表综合<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">列表项可以拆行，
+对其则自动续行。</p>
+</li>
+<li><p class="first">列表项课包含多个段落。</p>
+<p>空行开始新的段落，
+新段落要和列表项内对齐。</p>
+</li>
+<li><p class="first">列表下的代码段注意对齐即可。</p>
+<div class="highlight-python"><div class="highlight"><pre>printf &#39;hello world.&#39;
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="id10">
+<h2>定义<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>git</dt>
+<dd>simple and beautiful.</dd>
+<dt>subversion</dt>
+<dd><p class="first">VCS with many constrains.</p>
+<p class="last">Why not git ?</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id11">
+<h2>分隔线<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<p>四条或以上减号、下划线显示为分割线</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id12">
+<h2>粗体和斜体<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>这是 <strong>粗体</strong> ， 这是 <em>斜体</em> 。</p>
+<p>不留白的<strong>粗体</strong>和<em>斜体</em>效果。</p>
+</div>
+<div class="section" id="id13">
+<h2>删除线<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<p><span class="strike">删除线</span> 效果</p>
+<p>不留白的<span class="strike">删除线</span>效果</p>
+</div>
+<div class="section" id="id14">
+<h2>下划线<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<p><span class="underline">下划线</span> 效果</p>
+<p>:不留白的<span class="underline">下滑线</span>效果</p>
+</div>
+<div class="section" id="id15">
+<h2>上标和下标<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>water: H<sub>2</sub>O</li>
+<li>E = mc<sup>2</sup></li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h2>等宽字体<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<p>两个连续反引号内嵌代码，如: <tt class="docutils literal"><span class="pre">git</span> <span class="pre">status</span></tt> 。</p>
+</div>
+<div class="section" id="id17">
+<h2>引言<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<p><cite>RTFD</cite>  by Victor</p>
+</div>
+<div class="section" id="id18">
+<h2>清除标记空白<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<p>标记符号前后空白用<strong>反斜线</strong>消除</p>
+</div>
+<div class="section" id="id19">
+<h2>一般方式表示表格<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="30%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Header 1</th>
+<th class="head">Header 2</th>
+<th class="head">Header 3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>body row 1</td>
+<td>column 2</td>
+<td>column 3</td>
+</tr>
+<tr class="row-odd"><td>body row 2</td>
+<td colspan="2">Cells may span column.</td>
+</tr>
+<tr class="row-even"><td>body row 2</td>
+<td rowspan="3">haha</td>
+<td rowspan="3"><ol class="first last arabic simple">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td>body row 3</td>
+</tr>
+<tr class="row-even"><td>body row 4</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id20">
+<h2>简单方式表示的表格<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="25%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Inputs</th>
+<th class="head">Output</th>
+</tr>
+<tr class="row-even"><th class="head">A</th>
+<th class="head">B</th>
+<th class="head">A or B</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td>False</td>
+<td>true</td>
+<td>False</td>
+</tr>
+<tr class="row-even"><td>true</td>
+<td>true</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="url">
+<h2>URL自动链接<a class="headerlink" href="#url" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>网址 <a class="reference external" href="http://lmsresearch.com">http://lmsresearch.com</a></li>
+<li>email <a class="reference external" href="mailto:lmscsomg&#37;&#52;&#48;gmail&#46;com">lmscsomg<span>&#64;</span>gmail<span>&#46;</span>com</a></li>
+</ul>
+</div>
+<div class="section" id="id21">
+<h2>文字链接<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>访问 <a class="reference external" href="http://google.com/">Google</a> .</li>
+<li>链接定义在后面，如 <a class="reference external" href="http://github.com">GitHub</a> .</li>
+<li>反引号括起多个单词的链接，如 <a class="reference external" href="http://lmsresearch.com">my blog</a> .</li>
+</ul>
+</div>
+<div class="section" id="id22">
+<h2>插入图片<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/me.jpg"><img alt="../_images/me.jpg" src="../_images/me.jpg" /></a>
+</div>
+<div class="section" id="id23">
+<h2>引用<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<p>回到顶部，<a class="reference internal" href="#label-1"><em>reStructedText Grammar</em></a></p>
+</div>
+<div class="section" id="id24">
+<h2>参考<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://http://www.worldhello.net/gotgithub/appendix/markups.html">常用轻量级标记语言对照</a></li>
+<li><a class="reference external" href="http://pm.readthedocs.org/zh_CN/latest/doc/sphinx.html">用Sphinx编写技术文档</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="intellij_idea.html" class="btn btn-neutral float-right" title="Intellij idea"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../languages/swift.html" class="btn btn-neutral" title="Swift"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, lms.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
