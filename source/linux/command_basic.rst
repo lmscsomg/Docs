@@ -91,7 +91,22 @@ Linux_command_basic
 
 压缩与打包
 ----------
-1. tar 
+1. tar
 
+
+数据流重定向
+---------------
+1. 标准输入 0 < or << **< 覆盖, << 添加**
+
+   标准输出 1  > or >>
+
+   标准错误输出 2 2> or 2>> (2> /dev/null 错误信息丢弃)
+
+   ::
+        find / -name '*hehe' > list 2> /dev/null
+        find / -name '*haha*' > list 2>&1 (错误信息和正确信息放一起的特殊语法)
+
+2. cat > file < file2
+   cat > file << "eof" (键盘输入eof时,输入结束,file不会有eof)
 
 
