@@ -20,3 +20,9 @@ keys_vim
 --------
 1. x 删除当前字符
 2. d0 删除至行首
+
+
+替换
+------
+1. :%s/old/new/g 所有出现的old换成new
+2. :%s/old/new/gi 所有出现old换成new,不区分大小写

@@ -77,7 +77,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#id1">文件与目录管理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">磁盘与文件系统</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">压缩与打包</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#bash">bash操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">数据流重定向</a></li>
 </ul>
 </li>
 </ul>
@@ -131,6 +131,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../shortcut_keys/vim_keys.html#id1">模式转换</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shortcut_keys/vim_keys.html#id2">移动</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shortcut_keys/vim_keys.html#id3">删除</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shortcut_keys/vim_keys.html#id4">替换</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../shortcut_keys/intellij_idea_keys.html">keys_Intellij IDEA</a></li>
@@ -173,22 +174,22 @@
 <div class="section" id="id1">
 <h2>文件与目录管理<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">chgrp [-R] groupName fileName</p>
-<p>chown [-R] (groupName:)usrName fileName</p>
-<p>chmod [-R] 777 fileName (u,g,o,a +-)</p>
+<li><p class="first">chgrp [-R] groupName fileName
+chown [-R] (groupName:)usrName fileName
+chmod [-R] 777 fileName (u,g,o,a +-)</p>
 </li>
 <li><p class="first">pwd -p 不以连接方式显示</p>
 </li>
-<li><p class="first">mdkir -m 777 testDir</p>
-<p>mkdir -p testDir/testSubDir/testFile</p>
+<li><p class="first">mdkir -m 777 testDir
+mkdir -p testDir/testSubDir/testFile</p>
 </li>
 <li><p class="first">cp -a 复制全属性（权限不够无法更改）</p>
 </li>
-<li><p class="first">cat -n 显行号</p>
-<p>cat -A 可列出特殊字符</p>
+<li><p class="first">cat -n 显行号
+cat -A 可列出特殊字符</p>
 </li>
-<li><p class="first">head -n 20</p>
-<p>head -n -100 后100行都不打印</p>
+<li><p class="first">head -n 20
+head -n -100 后100行都不打印</p>
 </li>
 <li><p class="first">tail -n +100 打印100行以后的</p>
 <p><strong>head -n 20 fileName | tail -n 10 (第11行到第20行)</strong></p>
@@ -257,15 +258,21 @@
 <li>tar</li>
 </ol>
 </div>
-<div class="section" id="bash">
-<h2>bash操作<a class="headerlink" href="#bash" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id4">
-<h3>1. 数据流重定向<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple">
-<li>标准输入 0 &lt; or &lt;&lt;
-标准输出 1  &gt; or &gt;&gt;</li>
-</ol>
+<h2>数据流重定向<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">标准输入 0 &lt; or &lt;&lt; <strong>&lt; 覆盖, &lt;&lt; 添加</strong></p>
+<p>标准输出 1  &gt; or &gt;&gt;</p>
+<p>标准错误输出 2 2&gt; or 2&gt;&gt; (2&gt; /dev/null 错误信息丢弃)</p>
+<div class="highlight-python"><div class="highlight"><pre>find / -name &#39;*hehe&#39; &gt; list 2&gt; /dev/null
+find / -name &#39;*haha*&#39; &gt; list 2&gt;&amp;1 (错误信息和正确信息放一起的特殊语法)
+</pre></div>
 </div>
+</li>
+<li><p class="first">cat &gt; file &lt; file2</p>
+<p>cat &gt; file &lt;&lt; &#8220;eof&#8221; (键盘输入eof时,输入结束,file不会有eof)</p>
+</li>
+</ol>
 </div>
 </div>
 
