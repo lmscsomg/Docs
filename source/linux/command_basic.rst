@@ -4,8 +4,10 @@ Linux_command_basic
 文件与目录管理
 --------------
 1. chgrp [-R] groupName fileName
+
    chown [-R] (groupName:)usrName fileName
-   chmod [-R] 777 fileName (u,g,o,a +-)
+
+   chmod [-R] 777 fileName (u,g,o,a +- rwx)
 
 2. pwd -p 不以连接方式显示
 

@@ -29,8 +29,8 @@
 
   
     <link rel="top" title="Notes 1.0 documentation" href="../index.html"/>
-        <link rel="next" title="Language_Haskell" href="../languages/haskell.html"/>
-        <link rel="prev" title="Linux_awk" href="awk.html"/> 
+        <link rel="next" title="Linux_awk" href="awk.html"/>
+        <link rel="prev" title="Conf_J2EE configuration" href="../configuration/j2ee.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -68,11 +68,6 @@
 </li>
 </ul>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="awk.html">Linux_awk</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="awk.html#id1">1. 基本结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="awk.html#id2">2. 内建变量</a></li>
-</ul>
-</li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Linux_command_basic</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">文件与目录管理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">磁盘与文件系统</a></li>
@@ -81,6 +76,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#pipe">管道pipe</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="awk.html">Linux_awk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="awk.html#id1">1. 基本结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.html#id2">2. 内建变量</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sed.html">Linux_sed</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../languages/haskell.html">Language_Haskell</a><ul>
@@ -94,7 +95,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tools/reStructedText.html">reStructedText Grammar</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/reStructedText.html">Tool_reStructedText_Grammar</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/reStructedText.html#id1">空行分段</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/reStructedText.html#id2">自动换行</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/reStructedText.html#id3">不留白续行</a></li>
@@ -126,6 +127,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../tools/intellij_idea.html#source">1. source</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/regular_expression.html">Tool_regular_expression</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../shortcut_keys/vim_keys.html">keys_vim</a><ul>
@@ -133,6 +135,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../shortcut_keys/vim_keys.html#id2">移动</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shortcut_keys/vim_keys.html#id3">删除</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shortcut_keys/vim_keys.html#id4">替换</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shortcut_keys/vim_keys.html#id5">纵向编辑模式</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../shortcut_keys/intellij_idea_keys.html">keys_Intellij IDEA</a></li>
@@ -175,9 +178,9 @@
 <div class="section" id="id1">
 <h2>文件与目录管理<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">chgrp [-R] groupName fileName
-chown [-R] (groupName:)usrName fileName
-chmod [-R] 777 fileName (u,g,o,a +-)</p>
+<li><p class="first">chgrp [-R] groupName fileName</p>
+<p>chown [-R] (groupName:)usrName fileName</p>
+<p>chmod [-R] 777 fileName (u,g,o,a +- rwx)</p>
 </li>
 <li><p class="first">pwd -p 不以连接方式显示</p>
 </li>
@@ -326,10 +329,10 @@ find / -name &#39;*haha*&#39; &gt; list 2&gt;&amp;1 (错误信息和正确信息
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../languages/haskell.html" class="btn btn-neutral float-right" title="Language_Haskell"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="awk.html" class="btn btn-neutral float-right" title="Linux_awk"/>Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="awk.html" class="btn btn-neutral" title="Linux_awk"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../configuration/j2ee.html" class="btn btn-neutral" title="Conf_J2EE configuration"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
