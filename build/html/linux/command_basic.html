@@ -290,25 +290,31 @@ find / -name &#39;*haha*&#39; &gt; list 2&gt;&amp;1 (错误信息和正确信息
 </div>
 </li>
 <li><p class="first"><strong>grep</strong> 参数 &#8216;字符串&#8217; filename</p>
-<p>-c 找到字符串的次数
--i 忽略大小写的不同
--n 输出行号
--v 反向选择</p>
+<div class="line-block">
+<div class="line">-c 找到字符串的次数</div>
+<div class="line">-i 忽略大小写的不同</div>
+<div class="line">-n 输出行号</div>
+<div class="line">-v 反向选择</div>
+</div>
 </li>
 <li><p class="first">sort 参数 filename</p>
-<p>-n 使用纯数字排序
--r 反向
--u 相同数据仅显示一行
--t 分隔符
--k 以特定区间排序</p>
+<div class="line-block">
+<div class="line">-n 使用纯数字排序</div>
+<div class="line">-r 反向</div>
+<div class="line">-u 相同数据仅显示一行</div>
+<div class="line">-t 分隔符</div>
+<div class="line">-k 以特定区间排序</div>
+</div>
 <div class="highlight-python"><div class="highlight"><pre>cat /etc/passwd | sort -t &#39;:&#39; -k 3 -n
 </pre></div>
 </div>
 </li>
 <li><p class="first">wc (word_count)</p>
-<p>-l 行
--w 多少字(英文单字)
--n 多少字符</p>
+<div class="line-block">
+<div class="line">-l 行</div>
+<div class="line">-w 多少字(英文单字)</div>
+<div class="line">-n 多少字符</div>
+</div>
 </li>
 </ol>
 </div>
