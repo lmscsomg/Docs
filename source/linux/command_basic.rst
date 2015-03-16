@@ -106,4 +106,47 @@ Linux_command_basic
 
    cat > file << "eof" (键盘输入eof时,输入结束,file不会有eof)
 
+3. && || 短路效应
+
+
+管道pipe
+---------
+1. cut -d '分隔符' -f fields(注意fields的初始为1)
+   ::
+
+        echo $PATH | cut -d ':' -f 3,5
+
+   cut -c 字符范围
+   ::
+
+        echo $PATH | cut -c 12-20 (第12-20的字符)
+
+
+2. **grep** 参数 '字符串' filename
+
+   -c 找到字符串的次数
+   -i 忽略大小写的不同
+   -n 输出行号
+   -v 反向选择
+
+3. sort 参数 filename
+
+   -n 使用纯数字排序
+   -r 反向
+   -u 相同数据仅显示一行
+   -t 分隔符
+   -k 以特定区间排序
+
+   ::
+
+        cat /etc/passwd | sort -t ':' -k 3 -n
+
+
+4. wc (word_count)
+
+   -l 行
+   -w 多少字(英文单字)
+   -n 多少字符
+
+
 
