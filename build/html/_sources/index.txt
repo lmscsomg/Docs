@@ -21,8 +21,9 @@ Victor's Notes
 .. toctree::
    :maxdepth: 1
 
-   linux/awk
    linux/command_basic
+   linux/awk
+   linux/sed
 
 3. Language
 -------------
