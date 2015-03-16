@@ -78,6 +78,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#id2">磁盘与文件系统</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">压缩与打包</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">数据流重定向</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pipe">管道pipe</a></li>
 </ul>
 </li>
 </ul>
@@ -271,6 +272,43 @@ find / -name &#39;*haha*&#39; &gt; list 2&gt;&amp;1 (错误信息和正确信息
 </li>
 <li><p class="first">cat &gt; file &lt; file2</p>
 <p>cat &gt; file &lt;&lt; &#8220;eof&#8221; (键盘输入eof时,输入结束,file不会有eof)</p>
+</li>
+<li><p class="first">&amp;&amp; || 短路效应</p>
+</li>
+</ol>
+</div>
+<div class="section" id="pipe">
+<h2>管道pipe<a class="headerlink" href="#pipe" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">cut -d &#8216;分隔符&#8217; -f fields(注意fields的初始为1)</p>
+<div class="highlight-python"><div class="highlight"><pre>echo $PATH | cut -d &#39;:&#39; -f 3,5
+</pre></div>
+</div>
+<p>cut -c 字符范围</p>
+<div class="highlight-python"><div class="highlight"><pre>echo $PATH | cut -c 12-20 (第12-20的字符)
+</pre></div>
+</div>
+</li>
+<li><p class="first"><strong>grep</strong> 参数 &#8216;字符串&#8217; filename</p>
+<p>-c 找到字符串的次数
+-i 忽略大小写的不同
+-n 输出行号
+-v 反向选择</p>
+</li>
+<li><p class="first">sort 参数 filename</p>
+<p>-n 使用纯数字排序
+-r 反向
+-u 相同数据仅显示一行
+-t 分隔符
+-k 以特定区间排序</p>
+<div class="highlight-python"><div class="highlight"><pre>cat /etc/passwd | sort -t &#39;:&#39; -k 3 -n
+</pre></div>
+</div>
+</li>
+<li><p class="first">wc (word_count)</p>
+<p>-l 行
+-w 多少字(英文单字)
+-n 多少字符</p>
 </li>
 </ol>
 </div>
