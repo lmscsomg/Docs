@@ -41,6 +41,7 @@ Victor's Notes
 
    tools/reStructedText
    tools/intellij_idea
+   tools/regular_expression
 
 5. Shortcut keys
 ------------------
