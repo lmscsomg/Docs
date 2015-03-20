@@ -1,5 +1,8 @@
 Tool_regular_expression
 =========================
+
+基本
+-------
 **一定要加单引号，注意和Bash区别**
 
 1. ^word 待查找的字符串在行首
@@ -21,3 +24,24 @@ Tool_regular_expression
 6. [0-9] 范围
 7. [^abc] 不要abc任意一个, **没有[!abc]这种形式**
 8. 'o\{2,3\}' 连续2个或者3个o存在的字符
+
+拓展
+-----
+
++ 重复一个或一个以上的前一个RE字符
+
+::
+
+    o+ 一个以上的o
+    grep -n 'go+d' fileName
+
+? 0个或一个的前一个RE字符
+
+::
+
+    grep -n 'g?d' fileName
+
+() 查找“组”字符串
+
+::
+    grep -n 'g(la|oo)d' fileName

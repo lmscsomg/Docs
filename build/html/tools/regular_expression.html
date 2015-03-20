@@ -68,17 +68,22 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../linux/awk.html">Linux_awk</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../linux/awk.html#id1">1. 基本结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../linux/awk.html#id2">2. 内建变量</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../linux/command_basic.html">Linux_command_basic</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../linux/command_basic.html#id1">文件与目录管理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../linux/command_basic.html#id2">磁盘与文件系统</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../linux/command_basic.html#id3">压缩与打包</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../linux/command_basic.html#id4">数据流重定向</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../linux/command_basic.html#pipe">管道pipe</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/awk.html">Linux_awk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../linux/awk.html#id1">1. 基本结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux/awk.html#id2">2. 内建变量</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/sed.html">Linux_sed</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../linux/sed.html#id1">格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linux/sed.html#id2">查找替换</a></li>
 </ul>
 </li>
 </ul>
@@ -126,7 +131,11 @@
 <li class="toctree-l2"><a class="reference internal" href="intellij_idea.html#source">1. source</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Tool_regular_expression</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Tool_regular_expression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">基本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">拓展</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../shortcut_keys/vim_keys.html">keys_vim</a><ul>
@@ -174,6 +183,8 @@
             
   <div class="section" id="tool-regular-expression">
 <h1>Tool_regular_expression<a class="headerlink" href="#tool-regular-expression" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>基本<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p><strong>一定要加单引号，注意和Bash区别</strong></p>
 <ol class="arabic simple">
 <li>^word 待查找的字符串在行首</li>
@@ -204,6 +215,26 @@
 <li>[^abc] 不要abc任意一个, <strong>没有[!abc]这种形式</strong></li>
 <li>&#8216;o{2,3}&#8217; 连续2个或者3个o存在的字符</li>
 </ol>
+</div>
+<div class="section" id="id2">
+<h2>拓展<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>重复一个或一个以上的前一个RE字符</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>o+ 一个以上的o
+grep -n &#39;go+d&#39; fileName
+</pre></div>
+</div>
+<p>? 0个或一个的前一个RE字符</p>
+<div class="highlight-python"><div class="highlight"><pre>grep -n &#39;g?d&#39; fileName
+</pre></div>
+</div>
+<p>() 查找“组”字符串</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>grep -n &#8216;g(la|oo)d&#8217; fileName</dd>
+</dl>
+</div>
 </div>
 
 

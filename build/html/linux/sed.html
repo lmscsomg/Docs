@@ -28,7 +28,9 @@
   
 
   
-    <link rel="top" title="Notes 1.0 documentation" href="../index.html"/> 
+    <link rel="top" title="Notes 1.0 documentation" href="../index.html"/>
+        <link rel="next" title="Language_Haskell" href="../languages/haskell.html"/>
+        <link rel="prev" title="Linux_awk" href="awk.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -65,18 +67,24 @@
 </ul>
 </li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="awk.html">Linux_awk</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="awk.html#id1">1. 基本结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="awk.html#id2">2. 内建变量</a></li>
-</ul>
-</li>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="command_basic.html">Linux_command_basic</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="command_basic.html#id1">文件与目录管理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="command_basic.html#id2">磁盘与文件系统</a></li>
 <li class="toctree-l2"><a class="reference internal" href="command_basic.html#id3">压缩与打包</a></li>
 <li class="toctree-l2"><a class="reference internal" href="command_basic.html#id4">数据流重定向</a></li>
 <li class="toctree-l2"><a class="reference internal" href="command_basic.html#pipe">管道pipe</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="awk.html">Linux_awk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="awk.html#id1">1. 基本结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.html#id2">2. 内建变量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.html#id3">3. 例子</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Linux_sed</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">查找替换</a></li>
 </ul>
 </li>
 </ul>
@@ -124,7 +132,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../tools/intellij_idea.html#source">1. source</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/regular_expression.html">Tool_regular_expression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/regular_expression.html">Tool_regular_expression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/regular_expression.html#id1">基本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/regular_expression.html#id2">拓展</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../shortcut_keys/vim_keys.html">keys_vim</a><ul>
@@ -172,11 +184,39 @@
             
   <div class="section" id="linux-sed">
 <h1>Linux_sed<a class="headerlink" href="#linux-sed" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>格式<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>sed [-nefr] [动作]</p>
+<p><strong>动作:</strong></p>
+<p>a 新增,在新的一行</p>
+<p>c 替换</p>
+<p>d 删除</p>
+<p>i 插入,与sed -n 一起运行</p>
+<p>p 打印</p>
+<p>s 替换</p>
+<div class="highlight-python"><div class="highlight"><pre>nl /etc/passwd | sed &#39;2,5d&#39; 将第2-5行删除
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>查找替换<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>sed &#8216;s/oldString/newString/g&#8217;</p>
+<p><strong>注</strong>: newString如果为空，则相当于删除</p>
+</div>
 </div>
 
 
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../languages/haskell.html" class="btn btn-neutral float-right" title="Language_Haskell"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="awk.html" class="btn btn-neutral" title="Linux_awk"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

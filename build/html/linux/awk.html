@@ -29,8 +29,8 @@
 
   
     <link rel="top" title="Notes 1.0 documentation" href="../index.html"/>
-        <link rel="next" title="linux_command_basic" href="command_basic.html"/>
-        <link rel="prev" title="Conf_J2EE configuration" href="../configuration/j2ee.html"/> 
+        <link rel="next" title="Linux_sed" href="sed.html"/>
+        <link rel="prev" title="Linux_command_basic" href="command_basic.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -68,12 +68,25 @@
 </li>
 </ul>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="command_basic.html">Linux_command_basic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="command_basic.html#id1">文件与目录管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_basic.html#id2">磁盘与文件系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_basic.html#id3">压缩与打包</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_basic.html#id4">数据流重定向</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_basic.html#pipe">管道pipe</a></li>
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Linux_awk</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">1. 基本结构</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">2. 内建变量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3. 例子</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="command_basic.html">linux_command_basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sed.html">Linux_sed</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sed.html#id1">格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sed.html#id2">查找替换</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../languages/haskell.html">Language_Haskell</a><ul>
@@ -87,7 +100,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tools/reStructedText.html">reStructedText Grammar</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/reStructedText.html">Tool_reStructedText_Grammar</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/reStructedText.html#id1">空行分段</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/reStructedText.html#id2">自动换行</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/reStructedText.html#id3">不留白续行</a></li>
@@ -119,10 +132,19 @@
 <li class="toctree-l2"><a class="reference internal" href="../tools/intellij_idea.html#source">1. source</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/regular_expression.html">Tool_regular_expression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/regular_expression.html#id1">基本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/regular_expression.html#id2">拓展</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../shortcut_keys/vim_keys.html">keys_vim</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../shortcut_keys/vim_keys.html#id1">删除</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shortcut_keys/vim_keys.html#id1">模式转换</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shortcut_keys/vim_keys.html#id2">移动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shortcut_keys/vim_keys.html#id3">删除</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shortcut_keys/vim_keys.html#id4">替换</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shortcut_keys/vim_keys.html#id5">纵向编辑模式</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../shortcut_keys/intellij_idea_keys.html">keys_Intellij IDEA</a></li>
@@ -167,9 +189,65 @@
 <div class="highlight-python"><div class="highlight"><pre>awk -F &#39;-&#39; &#39;BEGIN{statements} {statements} END{statements} file&#39;
 </pre></div>
 </div>
+<ol class="arabic simple">
+<li>-F 可选，指定分隔符</li>
+<li>BEGIN/END可选</li>
+<li>顺序: BEGIN -&gt; 每一行执行statement -&gt; END</li>
+</ol>
 </div>
 <div class="section" id="id2">
 <h2>2. 内建变量<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>NF 每一行拥有的字段总数</li>
+<li>NR 目前awk做处理的是第几行数据</li>
+<li>FS 目前的分隔符，默认是空格键</li>
+<li>$0 当前行文本</li>
+<li>$1 第一个字段</li>
+<li>NF 最后一个字段</li>
+</ol>
+</div>
+<div class="section" id="id3">
+<h2>3. 例子<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li></li>
+</ol>
+<div class="highlight-python"><div class="highlight"><pre>$ awk -F &#39;:&#39; &#39;{print $2}&#39; fileName
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li></li>
+</ol>
+<div class="highlight-python"><div class="highlight"><pre>$ awk &#39;NR&lt;=3&#39; fileName
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li>拼接字符串</li>
+</ol>
+<div class="highlight-python"><div class="highlight"><pre>$ awk -F &#39;:&#39; &#39;{print $1&quot;-&quot;$2;}&#39; fileName
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li>统计行数</li>
+</ol>
+<div class="highlight-python"><div class="highlight"><pre>$ awk &#39;END{print NR}&#39; fileName
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li>过滤</li>
+</ol>
+<div class="highlight-python"><div class="highlight"><pre>$ awk &#39;$3 == 0 &amp;&amp; $6 == &quot;Listen&quot;&#39; fileName
+$ awk &#39;$3 &gt; 0 {print $0}&#39; fileName
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li>字符串匹配</li>
+</ol>
+<div class="highlight-python"><div class="highlight"><pre>$ awk &#39;$6 ~ /WAIT/&#39; fileName //第6列模糊匹配到WAIT的行
+$ awk &#39;$6 ~ /FIN|TIME/&#39; fileName //第6列模糊匹配FIN或者TIME
+$ awk &#39;$6 !~ /WAIT/&#39; fileName
+$ awk &#39;!/WAIT/&#39; fileName
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -179,10 +257,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="command_basic.html" class="btn btn-neutral float-right" title="linux_command_basic"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="sed.html" class="btn btn-neutral float-right" title="Linux_sed"/>Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../configuration/j2ee.html" class="btn btn-neutral" title="Conf_J2EE configuration"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="command_basic.html" class="btn btn-neutral" title="Linux_command_basic"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
