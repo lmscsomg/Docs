@@ -41,7 +41,6 @@ Victor's Notes
    :maxdepth: 1
 
    tools/reStructedText
-   tools/intellij_idea
    tools/regular_expression
 
 5. Shortcut keys
@@ -57,7 +56,7 @@ Victor's Notes
 .. toctree::
    :maxdepth: 1
 
-    Course/network
+   course/network
 
 Indices and tables
 ==================
