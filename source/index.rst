@@ -52,6 +52,13 @@ Victor's Notes
    shortcut_keys/vim_keys
    shortcut_keys/intellij_idea_keys
 
+6. Course
+-------------
+.. toctree::
+   :maxdepth: 1
+
+    Course/network
+
 Indices and tables
 ==================
 
