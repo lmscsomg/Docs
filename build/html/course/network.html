@@ -147,6 +147,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">Course_network</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">数据链路层</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">网络层</a></li>
 </ul>
 </li>
 </ul>
@@ -187,14 +188,101 @@
 <h1>Course_network<a class="headerlink" href="#course-network" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
 <h2>数据链路层<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>数据单元——<strong>帧</strong></li>
+<li>MTU</li>
+<li><strong>PPP协议</strong></li>
+</ol>
+</div>
+<div class="section" id="id2">
+<h2>网络层<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">数据单元——<strong>帧</strong></p>
+<li><p class="first">无连接，不可靠</p>
 </li>
-<li><p class="first">MTU</p>
+<li><p class="first"><strong>IP</strong>, ARP, ICMP, IGMP</p>
 </li>
-<li><p class="first"><strong>PPP协议</strong></p>
-<p>+h
-+h</p>
+<li><p class="first">IP地址( 分类的IP地址)</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>类别</td>
+<td>网络号</td>
+</tr>
+<tr class="row-even"><td>A类</td>
+<td>1——126</td>
+</tr>
+<tr class="row-odd"><td>B类</td>
+<td>128.1——191.255</td>
+</tr>
+<tr class="row-even"><td>C类</td>
+<td>192.0.1——223.255.255</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<ul class="simple">
+<li>1个路由器至少应当有2个不同的IP地址</li>
+<li>IP地址是网络层及以上使用的逻辑地址，是软件实现的</li>
+<li>IP数据报首部中的源地址和目的地址始终不变，Mac地址变</li>
+<li>路由器只根据目的站的IP地址的 <strong>网络号</strong> 进行路由选择</li>
+</ul>
+</li>
+<li><p class="first">ARP协议</p>
+<ul class="simple">
+<li>作用: IP地址&#8211;&gt;Mac地址</li>
+<li>ARP高速缓存</li>
+<li>流程:<ol class="arabic">
+<li>广播ARP请求，其中也把请求者IP到Mac映射放入请求分组中</li>
+<li>本局域网所有人收到，IP地址配对者 <strong>单播</strong> 响应分组</li>
+</ol>
+</li>
+<li>解决 <strong>同一局域网上</strong> 的映射问题，不在同一局域网，则通过路由器</li>
+<li>使用IP及调用ARP原因: 异构网络不同的硬件地址</li>
+</ul>
+</li>
+<li><p class="first">IP数据报</p>
+</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/IP.jpg"><img alt="../_images/IP.jpg" src="../_images/IP.jpg" /></a>
+<ol class="arabic" start="6">
+<li><p class="first">IP数据报解释</p>
+<ul class="simple">
+<li>生存时间： TTL (跳数限制，为0丢弃)</li>
+<li>片偏移（8个字节为单位）</li>
+</ul>
+</li>
+<li><p class="first">分组转发流程</p>
+</li>
+<li><p class="first">IP地址(划分子网)</p>
+<ul>
+<li><p class="first">拿出原主机地址的一部分作为子网号</p>
+</li>
+<li><p class="first">子网掩码:</p>
+<ol class="arabic">
+<li><p class="first">IP数据报无法看出所连网络是否划分子网</p>
+</li>
+<li><p class="first">子网的网络地址：目标地址 <strong>与</strong> 子网掩码</p>
+</li>
+<li><p class="first">默认子网掩码（与网络号对应）</p>
+</li>
+<li><dl class="first docutils">
+<dt>使用子网的分组转发:</dt>
+<dd><ul class="first last simple">
+<li>路由表: 目的网络地址、子网掩码、下一跳地址</li>
+<li>目的IP地址 <strong>与</strong> 子网掩码，匹配目的网络地址</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p class="first">IP地址(构成超网)</p>
 </li>
 </ol>
 </div>
