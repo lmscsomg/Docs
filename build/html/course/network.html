@@ -148,6 +148,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="">Course_network</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">数据链路层</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">网络层</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">运输层</a></li>
 </ul>
 </li>
 </ul>
@@ -287,6 +288,106 @@
 </ul>
 </li>
 <li><p class="first">IP地址(构成超网)</p>
+</li>
+</ol>
+</div>
+<div class="section" id="id3">
+<h2>运输层<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">基本概念</p>
+<ul class="simple">
+<li>通信的端点是主机中的 <strong>进程</strong></li>
+<li>网络层位主机之间提供逻辑通信，运输层位应用进程之间提供端到端的逻辑通信</li>
+<li>运输层要进行差错检测，网络层IP数据报只检测首部</li>
+<li>TCP需要建立连接，不提供广播和多播</li>
+<li>UDP不需要先建立连接</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="83%" />
+<col width="17%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>应用层协议</td>
+<td>UDP</td>
+</tr>
+<tr class="row-even"><td>DNS</td>
+<td>UDP</td>
+</tr>
+<tr class="row-odd"><td>TFTP(简单文件传送协议)</td>
+<td>UDP</td>
+</tr>
+<tr class="row-even"><td>RIP(路由信息协议)</td>
+<td>UDP</td>
+</tr>
+<tr class="row-odd"><td>DHCP(动态主机配置协议)</td>
+<td>UDP</td>
+</tr>
+<tr class="row-even"><td>SNMP(简单网络管理协议)</td>
+<td>UDP</td>
+</tr>
+<tr class="row-odd"><td>NFS(网络文件系统)</td>
+<td>UDP</td>
+</tr>
+<tr class="row-even"><td>IGMP(网际组管理协议)</td>
+<td>UDP</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="83%" />
+<col width="17%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>SMTP(简单邮件传送协议)</td>
+<td>TCP</td>
+</tr>
+<tr class="row-even"><td>TELNET(远程终端协议)</td>
+<td>TCP</td>
+</tr>
+<tr class="row-odd"><td>HTTP</td>
+<td>TCP</td>
+</tr>
+<tr class="row-even"><td>FTP</td>
+<td>TCP</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="53%" />
+<col width="47%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>应用程序</td>
+<td>端口</td>
+</tr>
+<tr class="row-even"><td>FTP</td>
+<td>21</td>
+</tr>
+<tr class="row-odd"><td>TELNET</td>
+<td>23</td>
+</tr>
+<tr class="row-even"><td>SMTP</td>
+<td>25</td>
+</tr>
+<tr class="row-odd"><td>DNS</td>
+<td>53</td>
+</tr>
+<tr class="row-even"><td>TFTP</td>
+<td>69</td>
+</tr>
+<tr class="row-odd"><td>HTTP</td>
+<td>80</td>
+</tr>
+<tr class="row-even"><td>SNMP</td>
+<td>161</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p class="first">UDP协议</p>
 </li>
 </ol>
 </div>
