@@ -51,7 +51,6 @@ Course_network
 5. IP数据报
 
 .. image:: IP.jpg
-    :scale: 50%
 
 6. IP数据报解释
 
@@ -60,6 +59,10 @@ Course_network
    + 片偏移（8个字节为单位）
 
 7. 分组转发流程
+
+   + 特定主机路由
+
+   + 默认路由
 
 8. IP地址(划分子网)
 

@@ -51,7 +51,6 @@ Course_network
 5. IP数据报
 
 .. image:: IP.jpg
-    :scale: 50%
 
 6. IP数据报解释
 
