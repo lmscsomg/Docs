@@ -293,9 +293,10 @@
 </div>
 <div class="section" id="id3">
 <h2>运输层<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic">
-<li><p class="first">基本概念</p>
-<ul class="simple">
+<div class="section" id="id4">
+<h3>1. 基本概念<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
 <li>通信的端点是主机中的 <strong>进程</strong></li>
 <li>网络层位主机之间提供逻辑通信，运输层位应用进程之间提供端到端的逻辑通信</li>
 <li>运输层要进行差错检测，网络层IP数据报只检测首部</li>
@@ -386,10 +387,43 @@
 </tr>
 </tbody>
 </table>
-</li>
-<li><p class="first">UDP协议</p>
+</div></blockquote>
+</div>
+<div class="section" id="udp">
+<h3>2. UDP协议<a class="headerlink" href="#udp" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>无连接，不可靠，面向报文(保留边界，不拆分)，无拥塞机制(网络出现拥塞发送速率不会降低)</li>
+<li>格式(字节)：源端口(2), 目标端口(2)，长度(2),校验和(2)</li>
+<li>目标端口不正确，发送ICMP差错报文给发送方</li>
+<li>伪首部</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="tcp">
+<h3>3. TCP协议<a class="headerlink" href="#tcp" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>面向连接(打电话)， 可靠，全双工，面向字节流</li>
+<li>根据对方给出的窗口值和当前网络拥塞机制决定一个报文段包含的字节数</li>
+<li>TCP连接的端点叫做 <strong>套接字(IP地址: 端口号)</strong> .</li>
+<li><strong>同一个IP地址可以有多个不同的TCP连接，而同一个端口号可以出现在多个不同的TCP连接中</strong> .</li>
+<li>自动重传ARQ(发送方超时重传), 连续ARQ(窗口)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id5">
+<h3>4. TCP报文段首部<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/TCP.png" src="../_images/TCP.png" />
+<ol class="arabic simple" start="5">
+<li>首部解释<ul>
+<li>确认号：若为N，表示N-1之前均已收到</li>
+<li>ACK: ACK为1时，确认号字段才有效</li>
+<li>窗口：允许对方发送的数据量</li>
+</ul>
 </li>
 </ol>
+</div>
 </div>
 </div>
 
