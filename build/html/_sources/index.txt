@@ -6,6 +6,14 @@
 Victor's Notes
 =================================
 
+0. Academic
+------------
+
+.. toctree::
+   :maxdepth: 1
+
+   academic/3-26.rst
+
 1. Configuration
 ------------------
 
