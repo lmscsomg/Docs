@@ -1,9 +1,8 @@
 #Docs
-This is a repository which stores some notes and cheetsheets.
-You can visit the lastest version [**here**](http://lms-docs.readthedocs.org/en/latest/).
+This is a repository which stores some notes and cheatsheets.
 
 ##Have your own documentation
-You can visit [**here**](http://read-the-docs.readthedocs.org/en/latest/) if you have
+You can visit [here](http://read-the-docs.readthedocs.org/en/latest/) if you have
 managing your documentation.
 
 ##Issues you may meet
